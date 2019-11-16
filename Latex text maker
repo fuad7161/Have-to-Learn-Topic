@@ -1,0 +1,200 @@
+\documentclass[]{article}
+\usepackage[]{color}
+\usepackage{graphicx}
+\begin{document}
+	\title{Discrete mathametics}
+	\author{fuadul hasan, rony hossen}
+	\date{\today}
+	\maketitle
+	
+	\pagenumbering{...}
+	\pagenumbering{roman}
+	\tableofcontents
+	\newpage
+	\pagenumbering{arabic}
+
+	\section{1st paragraph}
+		\subsection{i love my country}	
+		
+	\paragraph{The document can be divided into chapters (if needed), sections and
+subsections. The following sectioning commands are available for
+the article class}
+	\subparagraph{ document can be divided into chapters (if needed), sections and
+subsections. The following sectioning commands are available for
+the article class}
+	
+	\section{i hate it}
+	\paragraph{The document can be divided into chapters (if needed), sections and
+subsections. The following sectioning commands are available for
+the article class}
+
+	\section{but i still doing it}
+	\paragraph{The document can be divided into chapters (if needed), sections and
+subsections. The following sectioning commands are available for
+the article class}
+	
+	\section{is it well for me?}
+	\paragraph{The document can be divided into chapters (if needed), sections and
+subsections. The following sectioning commands are available for
+the article class}
+
+	{\color{blue}The document can be divided into chapters (if needed), sections and
+subsections. The following sectioning commands are available for
+the article class}
+
+		{\huge fuadul hasan}
+		
+		
+		\begin{flushleft}
+			my first project on textmark.
+			I love my work.
+		\end{flushleft} 
+		
+		\begin{center}
+			my first project on textmark.
+			I love my work.
+		\end{center}
+		
+		\begin{flushright}
+			my first project on textmark.
+			I love my work.
+		\end{flushright}
+		
+		\begin{enumerate}
+			\item first item
+			\item second item
+			\item third item
+		\end{enumerate}
+		
+		\newpage
+		
+		\begin{enumerate}
+			\item first item
+			\item second item
+			\item third item
+			\begin{itemize}
+			\item a sub-thing
+			\item another sub-thing
+			\item more thing
+			\end{itemize}
+		\end{enumerate}
+		
+		
+		\section{spacing}
+	\paragraph{The document can be divided\\ into chapters (if needed), sections and\\
+subsections. \hfill The following sectioning commands are available for the article class\\}
+\section{mathematical equation}
+
+	\begin{center}
+			$(a+b)^2$= $a^2+2ab+b^2$\\
+			{\large $h_2$O}
+			
+			$$\frac{a}{3}$$		
+			$$\frac{\frac{a}{b}+d}{\frac{d}{e}+e}$$
+			
+			$$\frac{\sqrt{{b}^2+d}}{b}$$
+
+			
+			 $$\sqrt[a]{3}$$
+			$$\sum_{x=1}^5 Y^Z$$
+			$$\int_a^b f(x)$$
+
+			$\alpha,\beta,\delta,\Delta, \theta,\Theta, \mu$\\
+
+			$ax^2+bx+c=0$ \[x = \frac{-b\pm\sqrt{b^2-4ab}}{2a}\]
+			\end{center}
+		\begin{equation}
+			\frac{a^2+b^2}{a+b} = a-b
+		\end{equation}
+		
+		\begin{eqnarray}
+			(a+b)(a+b) & = & a^2+ab+ba+b^2 					\nonumber\\
+		& = & a^2+2ab+b^2
+		\end{eqnarray}
+		
+		\begin{eqnarray}
+			(a+b)(a+b) & = & a^2+ab+ab+b^2
+			\nonumber\\
+			& = & a^2+2ab+b^2			
+		\end{eqnarray}
+			\[
+		\begin{array}{ccc}
+		x-\lambda & 1 & 0 \\
+		0 & x-\lambda & 1 \\
+		0 & 0 & x-\lambda
+		\end{array}
+			\]
+			\subsection{matrix}
+			\[
+		\begin{array}{ccc}
+		x-\lambda & 1 & 0 \\
+		0 & x-\lambda & 1 \\
+		0 & 1 & x-\lambda
+		
+		\end{array}					
+			\]
+			%image adding
+\section{image adding}
+		\begin{figure}[h]
+			\centering							\includegraphics[width=5cm, height=4cm]{Tulips.jpg}
+			\caption{Tulips}
+		\end{figure}
+
+		%table making
+		\newpage
+\section{table}
+		\begin{table}[h!]
+			\begin{center}
+				\caption{My first table}
+				\begin{tabular}{l|c|r}
+				\hline
+				\textbf{value1}& \textbf{value2} & \textbf{value3}\\
+				\hline
+				$\alpha$ & $\beta$ & $\gamma$\\
+				\hline
+				1&10&a\\
+				\hline
+				2&20&b\\
+				\hline
+				3&30&c\\
+				\hline
+				
+				\end{tabular}
+			\end{center}
+		\end{table}
+		
+		
+		\begin{tabular}{ l c r }
+ 		\hline
+ 		1 & 2 & 3 \\
+ 		 \hline
+		 4 & 5 & \multicolumn{1}{r|}{6} \\ 			\hline
+		 7 & 8 & 9 \\
+		  \hline
+		\end{tabular}
+		
+		%Creating Frames
+	\section{Creating Frames}
+		\begin{frame}
+			\title{fuad}
+		\end{frame}
+		
+		\begin{frame}
+			The contents in slide.\\
+			The contents in slide. 
+		\end{frame}
+		
+	\section{effects on presentation}
+		\begin{itemize}
+			\item 1- fuadul hasan1
+			\item<2-> fuadul hasan2
+			\item<3> fuadul hasan3
+			\item<4> fuadul hasan4
+		\end{itemize}
+			
+	\label{i love my country}
+	\ref{i love my country}
+	\pageref{i love my country}
+	
+		
+\end{document}
