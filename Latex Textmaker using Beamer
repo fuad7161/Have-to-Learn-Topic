@@ -1,0 +1,163 @@
+\documentclass[]{beamer}
+\usetheme{Marburg}
+
+\title{Discrete Mathematics}
+\author{Fuadul Hasan \& SK Rony}
+\date{}
+
+
+\begin{document}
+
+    
+   \begin{frame}
+    \titlepage
+    \end{frame}
+
+   \begin{frame}{Contents}
+        \begin{enumerate}
+            \item What is discrete mathematics?
+            \item Logic and Proofs
+            \item Probability
+            \item Graph Theory
+            \item Number theory
+            \item Counting
+        \end{enumerate}
+    \end{frame}
+    
+    
+   \begin{frame}{What is discrete mathematics?}
+        \item Discrete mathematics is the study of mathematical structures that are
+fundamentally discrete rather than continuous. In contrast to real numbers that have the property of varying ”smoothly”, the objects studied
+in discrete mathematics such as integers, graphs, and statements in
+logic do not vary smoothly in this way, but have distinct, separated
+values.\\
+    \end{frame}
+    
+      \begin{frame}{Logic and Proofs}
+            \begin{center}
+      \begin{tabular}{ |c|c|c| } 
+      \hline
+     \textbf{ propositional logic} & \textbf{first order logic} \\
+      \hline
+      true or false & true or false \\ 
+      \hline
+       Ex: 17 is greater than 12. & x is greater than y. \\ 
+      \hline
+      \end{tabular}
+        \end{center}
+        \paragraph{"17 is greater than 12." its a universal truth\\
+        but "x is greater than y." is not the universal truth
+        }
+    \end{frame}
+    
+    \begin{frame}{ Probability}
+        \item it is the study of random processes and their outcomes.\\
+        
+        
+        \paragraph{Steps to find the probability\\
+Step 1 − Calculate all possible outcomes of the experiment.\\
+Step 2 − Calculate the number of favorable outcomes of the experiment.\\
+Step 3 − Apply the corresponding probability formula.\\}
+
+        {\textit{Probabilityofoccurenceofanevent =}$$\frac{Totalnumberoffavourableoutcome}{TotalnumberofOutcomes}$$}
+    \end{frame}
+    
+    \begin{frame}
+    {\large Example:\\}
+        Tossing a Coin
+If a coin is tossed, there are two possible outcomes − Heads (H) or Tails (T)
+So, Total number of outcomes = 2
+
+Hence, the probability of getting a Head (H) on top is 1/2 and the probability of getting a Tails (T) on top is 1/2\\
+    
+        \begin{center}
+		\begin{figure}[h]
+		\begin{center}
+			\centering							\includegraphics[width=8cm,height=5cm]{headtail.jpg}
+			\end{center}
+			\caption{{\huge \textbf{coin}}}
+		\end{figure}
+	\end{center}
+\end{frame}
+    
+    
+    \begin{frame}{Graph Theory}
+        \paragraph{ A graph (denoted as G=(V,E)) consists of a non-empty set of vertices or nodes V and a set of edges E.}
+        
+         \begin{center}
+		\begin{figure}[h]
+		\begin{center}
+			\centering							\includegraphics[width=8cm,height=4cm]{graph2.png}
+			\end{center}
+			\caption{{graph}}
+		\end{figure}
+	\end{center}
+	\paragraph{The two discrete structures that we will cover are graphs and trees. A graph is a set of points, called nodes or vertices, which are interconnected by a set of lines called edges. The study of graphs, or graph theory is an important part of a number of disciplines in the fields of mathematics, engineering and computer science.}
+	
+    \end{frame}
+    
+    \begin{frame}{Example}
+        \paragraph{Graphs are nothing but connected nodes(vertex). So any network related, routing, finding relation, path etc related real life applications use graphs.\\GPS/Google Maps/Yahoo Maps, to find a route based on shortest route all are based on graph theory }
+        
+        \begin{center}
+		\begin{figure}[h]
+		\begin{center}
+			\centering							\includegraphics[width=8cm,height=4cm]{graph1.png}
+			\end{center}
+			\caption{{graph}}
+		\end{figure}
+	\end{center}
+        
+    \end{frame}
+    
+    \begin{frame}{Number theory}
+       \paragraph {Number Theory, the study of the integers, is one of the oldest and richest branches of mathematics}
+       
+       \begin{center}
+		\begin{figure}[h]
+		\begin{center}
+			\centering							\includegraphics[width=10cm,height=5cm]{number.jpg}
+			\end{center}
+			\caption{{\large \textbf{Number system}}}
+		\end{figure}
+	\end{center}
+       
+    \end{frame}
+    
+    \begin{frame}{EXample}
+    \paragraph{Here is some example of using numerical operation.\\}
+    \paragraph{Divisibility:}
+        \begin{center}
+		{\huge $\frac{a}{b}$}
+		\end{center}
+	\paragraph{Modular arithmetic:}
+	    \begin{center}
+		{\large
+		$0 = 8*0 + 0$\\
+		$1 = 8*0 + 1$\\
+		$2 = 8*0 + 2$\\
+		$3 = 8*0 + 3$\\
+		}
+		 
+	\end{center}
+	\paragraph{Formula:}
+	\begin{center}
+		{$$(a+b)^2= a^2+2ab+b^2$$}
+		\end{center}
+	
+    \end{frame}
+    
+   \begin{frame}{Counting}
+       \paragraph{Counting mainly encompasses fundamental counting rule, the permutation rule, and the combination rule.\\}
+       \paragraph{The Rule of Sum:}
+       \begin{center}
+          $$|A∪B|=|A|+|B|$$ 
+       \end{center}
+       
+       \paragraph{The Rule of Product:}
+       \begin{center}
+          $$|A×B|=|A|x|B|$$ 
+       \end{center}
+   \end{frame}
+
+\end{document}
