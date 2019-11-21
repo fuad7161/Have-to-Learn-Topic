@@ -1,0 +1,59 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class myclass{
+    int a,b,c;
+public:
+    myclass(int i);
+    myclass(int i, int j);
+    myclass(int i, int j, int k);
+    double circle();
+    int ractangle();
+    double triangle();
+};
+
+myclass::myclass(int i)
+{
+    a = i;
+}
+
+myclass::myclass(int i,int j)
+{
+    a = i;
+    b = j;
+}
+
+myclass::myclass(int i,int j,int k)
+{
+    a = i;
+    b = j;
+    c = k;
+}
+
+double myclass::circle()
+{
+    return a*a*3.1416;
+}
+
+int myclass::ractangle()
+{
+    return a*b;
+}
+
+double myclass::triangle()
+{
+    int s = (a+b+c)/2;
+    double area = (double)(s*(s-a)*(s-b)*(s-c));
+    area = sqrt(area);
+    return area;
+}
+
+int main(int argc, char const *argv[])
+{
+    myclass circle(3),ractangle(4,5),triangle(6,7,8);
+    cout<<"Circle ="<<circle.circle()<<endl;
+    cout<<"Ractangle ="<<ractangle.ractangle()<<endl;
+    cout<<"Triangle ="<<triangle.triangle()<<endl;
+
+    return 0;
+}
