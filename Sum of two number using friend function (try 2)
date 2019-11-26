@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+typedef vector<int> vi;
+typedef pair<int , int>ii;
+typedef vector<ii> vii;
+typedef set<int> si;
+typedef map<string,int>msi;
+
+#define fr(i,a,b) for(int i = (int)a; i<=(int)b;i++)
+#define frit(c,it) for(vii::itrator it = (c).being(); it != (c).end();it++)
+
+#define SIZE 100
+
+#include<iostream>
+#include<cstdio>
+#include<cstring>
+using namespace std;
+
+class myclass
+{
+    int a,b;
+public:
+    friend int sum(myclass x);
+    void set_ab(int i, int j);
+};
+
+void myclass::set_ab(int i, int j)
+{
+    a = i;
+    b = j;
+}
+
+int sum(myclass x)
+{
+    return x.a+x.b;
+}
+
+int main() {
+    myclass x;
+    x.set_ab(3,4);
+    cout<<sum(x)<<endl;
+   return 0;
+}
