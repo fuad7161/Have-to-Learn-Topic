@@ -1,0 +1,71 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+typedef vector<int> vi;
+typedef pair<int , int>ii;
+typedef vector<ii> vii;
+typedef set<int> si;
+typedef map<string,int>msi;
+
+#define fr(i,a,b) for(int i = (int)a; i<=(int)b;i++)
+#define frit(c,it) for(vii::itrator it = (c).being(); it != (c).end();it++)
+
+#define SIZE 100
+
+#include<iostream>
+#include<cstdio>
+#include<cstring>
+using namespace std;
+
+const int IDLE = 0;
+const int INSUE = 1;
+
+class c2;
+
+class c1
+{
+    int status;
+public:
+    void set_status(int state);
+    friend int idel(c1 a,c2 b);
+    
+};
+
+class c2{
+    int status;
+public:
+    void set_status(int state);
+    friend int idel(c1 a,c2 b);
+};
+
+void c1::set_status(int state)
+{
+    status = state;
+}
+
+void c2::set_status(int state)
+{
+    status = state;
+}
+
+int idel(c1 a,c2 b)
+{
+    //cout<<a.status<<" "<<b.status<<endl;
+    if(a.status || b.status) return 0;
+    else return 1;
+}
+ 
+int main() {
+    c1 x;
+    c2 y;
+    x.set_status(IDLE);
+    y.set_status(IDLE);
+    if(idel(x,y)) cout<<"screen can be used"<<endl;
+    else cout<<"in use"<<endl;
+
+    x.set_status(INSUE);
+    if(idel(x,y)) cout<<"screen can be used"<<endl;
+    else cout<<"in use"<<endl;
+   return 0;
+}
