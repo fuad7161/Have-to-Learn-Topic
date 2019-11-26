@@ -1,0 +1,51 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+typedef vector<int> vi;
+typedef pair<int , int>ii;
+typedef vector<ii> vii;
+typedef set<int> si;
+typedef map<string,int>msi;
+
+#define fr(i,a,b) for(int i = (int)a; i<=(int)b;i++)
+#define frit(c,it) for(vii::itrator it = (c).being(); it != (c).end();it++)
+
+#define SIZE 100
+
+#include<iostream>
+#include<cstdio>
+#include<cstring>
+using namespace std;
+
+class twoValue
+{
+    int a;
+    int b;
+public:
+    twoValue(int i, int j)
+    {
+        a = i;
+        b = j;
+    }
+    friend class Min;
+};
+
+class Min{
+public:
+    int min(twoValue x);
+};
+
+int Min::min(twoValue x)
+{
+    return x.a < x.b ? x.a : x.b;
+}
+
+int main() {
+    twoValue ob(4 ,5);
+    Min m;
+
+    cout<<m.min(ob)<<endl;
+
+    return 0;
+}
