@@ -1,0 +1,52 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAX = 1e5+5;
+
+bool two_pointer(int a[],int b[], int n,int p ,int x)
+{
+    int i=0, j= p-1;
+    int r1,r2;
+    int div = 100000;
+    while(i<n&&j>=0)
+    {
+        if(abs(a[i]+b[j]-x)<div)
+        {
+            r1 = i;
+            r2 = j;
+            div = abs(a[i]+b[j]-x);
+        }
+        if(a[i]+b[j]>x)
+        {
+            j--;
+        }
+        else
+        {
+            i++;
+        }
+    }
+
+    cout<<a[r1]<<" "<<b[r2]<<endl;
+    return 0;
+
+}
+
+int main(int argc, char const *argv[])
+{
+    int n,p,x;
+    cin>>n>>p>>x;
+    int a[MAX],b[MAX];
+    for(int i=0; i<n; i++)
+    {
+        cin>>a[i];
+    }
+    sort(a,a+n);
+    for(int i=0; i<p; i++)
+    {
+        cin>>b[i];
+    }
+    sort(b,b+p);
+
+    two_pointer(a,b,n,p,x);
+    
+}
