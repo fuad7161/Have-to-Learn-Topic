@@ -1,0 +1,46 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAX = 5e5+5;
+
+bool two_pointer(int a[], int n, int x)
+{
+    int i=0, j= n-1;
+    while(i<j)
+    {
+        if(a[i]+a[j]==x)
+        {
+            cout<<a[i]<<a[j]<<endl;
+            return true;
+        }
+        if(a[i]+a[j]<x)
+        {
+            i++;
+        }
+        else
+        {
+            j--;
+        }
+    }
+    return false;
+}
+
+int main(int argc, char const *argv[])
+{
+    int n,x;
+    cin>>n>>x;
+    int a[MAX];
+    for(int i=0; i<n; i++)
+    {
+        cin>>a[i];
+    }
+    sort(a,a+n);
+    if(two_pointer(a,n,x))
+    {
+        cout<<x<<endl;
+    }
+    else
+    {
+        cout<<"not found"<<endl;
+    }
+}
