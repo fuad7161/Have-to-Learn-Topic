@@ -1,0 +1,116 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class loc{
+
+    int longitude,latitude;
+public:
+    loc(){}
+    loc(int lg,int lt)
+    {
+        longitude = lg;
+        latitude = lt;
+    }
+
+    void show()
+    {
+        cout<<longitude<<" ";
+        cout<<latitude<<endl;
+    }
+
+    loc operator+(loc ob2);
+    loc operator-(loc ob2);
+    loc operator=(loc ob2);
+    loc operator++();
+
+};
+
+
+
+loc loc :: operator+(loc ob2)
+{
+    loc temp;
+    temp.longitude = ob2.longitude + longitude;
+    temp.latitude = ob2.latitude + latitude;
+
+    return temp;
+}
+
+loc loc::operator-(loc ob2)
+{
+    loc temp;
+    temp.longitude = ob2.longitude - longitude;
+    temp.latitude = ob2.latitude - latitude;
+
+    return temp;
+}
+
+loc loc::operator=(loc ob2)
+{
+
+    longitude = ob2.longitude;
+    latitude = ob2.latitude;
+    return *this;
+}
+
+loc loc::operator++()
+{
+    longitude++;
+    latitude++;
+
+    return *this;
+}
+
+
+int main(int argc, char const *argv[])
+{
+    /* code */
+
+    loc ob1(5,8),ob2(9,10),ob3(10,21);
+    ob1.show();
+    ob2.show();
+
+    cout<<"value of ob2: "<<endl;
+    ob2.show();
+    cout<<endl;
+    cout<<"after using ++ operation of ob2: "<<endl;
+    ++ob2;
+    ob2.show();
+    cout<<endl;
+
+    cout<<"value of ob1&ob2 after increasing  value of ob1 assigning to ob2: "<<endl;
+    ob2 = ++ob1;
+    ob2.show();
+    cout<<endl;
+    ob1.show();
+    cout<<endl;
+    cout<<"After adding 2 number and assigning it on ob2: "<<endl;
+    ob2 = ob1 + ob2;
+    ob2.show();
+    cout<<endl;
+
+     cout<<"before using Equal operation of ob1&ob2&ob3 : "<<endl;
+   // ob1 = ob2 = ob3;
+    ob1.show();
+    ob2.show();
+    ob3.show();
+    cout<<endl;
+
+
+
+    cout<<"Equal operation of ob1&ob2&ob3 : "<<endl;
+    ob1 = ob2 = ob3;
+    ob1.show();
+    ob2.show();
+    ob3.show();
+    cout<<endl;
+
+    cout<<"using minus operation on ob2:"<<endl;
+    ob2 = ob1 - ob2;
+    ob2.show();
+    cout<<endl;
+
+
+
+    return 0;
+}
