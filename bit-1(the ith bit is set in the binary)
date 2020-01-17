@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+ /*Count the number of ones in the binary
+ representation of the given number.*/
+
+bool check(int  n,int i)
+{
+    if(n&(1<<i)) return true;
+    else return false;
+}
+
+int solve() {
+ 
+    int n,a;
+    cin>>n>>a;
+   cout<<check(n,a)<<endl;
+}
+int main()
+{
+    int test = 1, tc = 0;
+    scanf("%d", &test);
+   // (void)getchar();
+    //cin >> test;
+    while (test--) {
+        //printf("Case %d: ", ++tc);
+        solve();
+    }
+    return 0;
+}
