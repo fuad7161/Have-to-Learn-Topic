@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+ /*Count the number of ones in the binary
+ representation of the given number.*/
+
+int countOne(int n)
+{
+    int count=0;
+    while(n){
+        n = n&(n-1);
+        count++;
+    }
+    return count;
+}
+
+int solve() {
+ 
+    int n;
+    cin>>n;
+    cout<<countOne(n)<<endl;
+}
+int main()
+{
+    int test = 1, tc = 0;
+    scanf("%d", &test);
+   // (void)getchar();
+    //cin >> test;
+    while (test--) {
+        //printf("Case %d: ", ++tc);
+        solve();
+    }
+    return 0;
+}
