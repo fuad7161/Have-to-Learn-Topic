@@ -1,0 +1,55 @@
+/*
+Now, we need 3 bits, one bit for each element.
+1 represent that the corresponding element is present in the subset,
+whereas 0 represent the corresponding element is not in the subset.
+Let’s write all the possible combination of these 3 bits.
+
+0 = (000)2 = {}
+1 = (001)2 = {c}
+2 = (010)2 = {b}
+3 = (011)2 = {b, c}
+4 = (100)2 = {a}
+5 = (101)2 = {a, c}
+6 = (110)2 = {a, b}
+7 = (111)2 = {a, b, c}
+
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+ /*Count the number of ones in the binary
+ representation of the given number.*/
+
+//possible Subsubsets
+void possibleSubsets(char a[],int n)
+{
+    for(int i=0;i<(1<<n);++i){
+        for(int j = 0;j<n;++j){
+            if(i&(1<<j))
+                cout<<a[j]<<" ";
+        }
+        cout<<endl;
+    }
+} 
+
+int solve() {
+ 
+    int n;
+    cin>>n;
+    char a[100];
+    for(int i=0;i<n;i++)
+        cin>>a[i];
+    possibleSubsets(a,n);
+}
+int main()
+{
+    int test = 1, tc = 0;
+    scanf("%d", &test);
+   // (void)getchar();
+    //cin >> test;
+    while (test--) {
+        //printf("Case %d: ", ++tc);
+        solve();
+    }
+    return 0;
+}
