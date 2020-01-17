@@ -1,0 +1,47 @@
+/*
+in this code we see that if any number is the power of two its returns true otherwise it returns false;
+so simple code of power of two oberator...... 
+thank in advance 
+author : fuadul hasan
+BSMRSTU
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+ 
+#define ll long long 
+const long long mod = 1000000007;
+int N = 1e6+6;
+ #define ll long long
+
+
+bool isPowerTwo(int n)
+{
+    if(n==0) return false;
+    else {
+        while(n%2==0) n/=2;
+        return (n==1);
+    }
+}
+
+int solve() {
+ 
+    int n;
+    cin>>n;
+    cout<<isPowerTwo(n)<<endl;
+}
+ 
+int main()
+{
+ 
+    int test = 1, tc = 0;
+    scanf("%d", &test);
+   // (void)getchar();
+    //cin >> test;
+    while (test--) {
+        //printf("Case %d: ", ++tc);
+        solve();
+    }
+ 
+    return 0;
+}
