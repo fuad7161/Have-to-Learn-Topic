@@ -1,0 +1,133 @@
+any four array all distinact number count from the four array
+
+/*
+Author: Fuadul Hasan(fuadul202@gmail.com)
+BSMRSTU,Gopalganj
+*/
+
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <algorithm>
+#include <cmath>
+#include <vector>
+#include <set>
+#include <map>
+#include <unordered_set>
+#include <unordered_map>
+#include <queue>
+#include <ctime>
+#include <cassert>
+#include <complex>
+#include <string>
+#include <cstring>
+#include <chrono>
+#include <random>
+#include <queue>
+#include <bitset>
+//#include<bits/stdc++.h>
+using namespace std;
+ 
+int         cinn()              {int x; scanf("%d", &x); return x;}
+long long   scll()              {long long x; scanf("%lld", &x); return x;}
+double      scd()               {double x; scanf("%lf", &x); return x;}
+void        coutt(int x)        {printf("%d ", x);}
+ 
+#define  scll                   scll()
+#define  gcd(a,b)               __gcd(a,b)
+#define  lcm(a,b)               (a*b)/gcd(a,b)
+#define  PI                     acos(-1.0)
+#define  vi                     std::vector<int>
+#define  vll                    std::vector<ll>
+#define  vit                    vector<int> :: iterator
+#define  sit                    set<int> :: iterator
+#define  mpsi                   std::map<string, int>
+#define  pb                     push_back
+#define  ll                     long long int
+#define  ld                     long double
+#define  ull                    unsigned long long int
+#define  min3(a,b,c)            min(a,min(b,c))
+#define  min4(a,b,c,d)          min(d,min(a,min(b,c)))
+#define  max3(a,b,c)            max(a,max(b,c))
+#define  max4(a,b,c,d)          max(d,max(a,max(b,c)))
+#define  nl                     printf("\n");
+#define  no                     printf("No");
+#define  yes                    printf("Yes");
+#define  F                      first
+#define  S                      second
+
+typedef pair<int,int> ii;
+typedef std::vector<ii> vii;
+ 
+const int mod           = 1e9 + 7;
+const int inf           = (int)2e9 + 5;
+const ll  Inf           = (ll)1e18 + 5;
+const int N             = 1e6 + 5;
+const int nn           = 3e5 + 5;
+
+int a[nn];
+int t[nn];
+
+int solve()
+{
+	int a1[5],a2[5],a3[5],a4[5],sum1=0,sum=0,i1,j1,k1,l1;
+	for(int i=1;i<=4;i++)
+		cin>>a1[i];
+	for(int i=1;i<=4;i++)
+		cin>>a2[i];
+	for(int i=1;i<=4;i++)
+		cin>>a3[i];
+	for(int i=1;i<=4;i++)
+		cin>>a4[i];
+	for(int i=1;i<=4;i++){
+		for(int j=1;j<=4;j++){
+			if(j!=i){
+				for(int k=1;k<=4;k++){
+					if(j!=k&&k!=i&&j!=i){
+						for(int l=1;l<=4;l++){
+							if(l!=i&&l!=j&&k!=l&&j!=i&&j!=k&&i!=k){
+								//cout<<a1[i]<<" "<<a2[j]<<" "<<a3[k]<<" "<<a4[l]<<endl;
+								sum = a[i]+b[j]+c[k]+d[l];
+								if(sum1<sum){
+									i1 = i;
+									j1= j;
+									k1 = k;
+									l1 = l;
+								}
+								sum1 = max(sum1,sum);
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	//cout<<sum1<<endl;
+	//cout<<i1<<" "<<j1<<" "<<k1<<" "<<l1<<endl;
+	cout<<a1[i1]<<" "<<a2[j1]<< " "<<a3[k1]<<" "<<a4[l1]<<endl;
+	return 0;
+
+}
+
+int main()
+{
+    int test = 1, tc = 0;
+    scanf("%d", &test);
+   // (void)getchar();
+    //cin >> test;
+    while (test--) {
+        //printf("Case %d: ", ++tc);
+        solve();
+    }
+ 
+    return 0;
+}
+
+
+
+/*cout<<a1[i]<<" "<<a2[j]<< " "<<a3[k]<<" "<<a4[l]<<endl;
+								sum = a1[i]+a2[j]+a3[k]+a4[l];
+								if(sum1<sum)
+									i1 = i; j1= j;k1 = k;l1 = l;
+								sum1 = max(sum1,sum);*/
